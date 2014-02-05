@@ -34,6 +34,8 @@ app.get('/users', user.list);
 
 app.post('/api', function(req, res){
 	console.log( req.body );
+	console.log( req );
+	res.send('thanks');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
