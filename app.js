@@ -34,10 +34,8 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.post('/api', function(req, res){
-	console.log( req.body );
 	req.setEncoding('utf8');
 	var xml = new XmlStream(req);
-	console.log( xml )
 	xml.on('updateElement: runQueryResponse', function(element) {
 		console.log( element );
 	});
