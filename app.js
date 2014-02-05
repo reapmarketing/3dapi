@@ -34,8 +34,15 @@ app.get('/users', user.list);
 
 app.post('/api', function(req, res){
 	console.log( req.body );
-	console.log( req );
-	res.send('thanks');
+	req.setEncoding('utf8');
+	var xml = new XmlStream(req);
+	console.log( xml )
+	xml.on('updateElement: runQueryResponse', function(element) {
+		console.log( element );
+	});
+	xml.on('end', function() {
+		res.end();
+	});
 });
 
 http.createServer(app).listen(app.get('port'), function(){
