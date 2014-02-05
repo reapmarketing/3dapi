@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmls$
-        <soap:Body>
-        <runQuery xmlns="http://3dcart.com/">
-                <storeUrl>devstandishsalongoods.3dcartstores.com</storeUrl>
-                <userKey>12345678912345678912345678912345</userKey>
-                <sqlStatement>select top 1 catalogid, id from products</sqlStatement>
-                <callBackURL>http://162.243.103.153:3000/api</callBackURL>
-        </runQuery>
-        </soap:Body>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<runQuery xmlns="http://3dcart.com/">
+			<storeUrl>devstandishsalongoods.3dcartstores.com</storeUrl>
+			<userKey>30003728817302916300037288173029</userKey>
+			<sqlStatement>select top 1 catalogid, id from products</sqlStatement>
+			<callBackURL>http://taylor.stand.sh/api</callBackURL>
+		</runQuery>
+	</soap:Body>
 </soap:Envelope>
-
